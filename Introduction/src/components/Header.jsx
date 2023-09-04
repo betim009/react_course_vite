@@ -1,18 +1,28 @@
 function Header() {
-    const nomes = ['Alex', 'Adenil', 'Adriana']
-    const idade = [22, 23, 24]
+    const firstName = 'Alberto';
+    const lastName = 'Couto';
+
+    function luckyNumber() {
+        const number = Math.floor(Math.random() * 60 + 1);
+        return number;
+    }
 
     return (
         <>
-            <p>Alberto</p>
-            <p>Cadu</p>
+            <h1 className="greeting">
+                Olá {`${firstName} ${lastName}`}
+            </h1>
+            <img src="https://i.imgur.com/rqvLd3q.png" alt="trevo" />
 
-            {nomes.map((e, i) => (
-                <div key={e}>
-                    <p>{e} {idade[i]}</p>
-                </div>
-            ))}
-
+            <h2 className="subtitle">Seus números da sorte da Mega-Sena são:</h2>
+            <ul>
+                <li>{luckyNumber()}</li>
+                <li>{luckyNumber()}</li>
+                <li>{luckyNumber()}</li>
+                <li>{luckyNumber()}</li>
+                <li>{luckyNumber()}</li>
+                <li>{luckyNumber()}</li>
+            </ul>
         </>
     )
 }
