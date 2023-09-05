@@ -1,14 +1,13 @@
-// import Component from './components/Component'
+import HelloWorld from './components/HelloWorld';
 import './App.css'
-import Header from './components/Header'
+
 
 function App() {
   return (
-    <>
-      {/* <Component /> */}
-      <Header />
-    </>
+    <div className="App">
+      < HelloWorld />
+    </div>
   )
 }
 
-export default App
+export default App;
